@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSplash();
     }
-
+//
     private void getSplash() {
         new Handler().postDelayed(new Runnable() {
             @Override
