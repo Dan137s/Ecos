@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+//En esta activity es la principal donde va el tiempo del splash screen
 public class MainActivity extends AppCompatActivity {
+    //Tiempo de duración del gift
     private final int DURACION_SPLASH = 5000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.txt_titulo);
 
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSplash();
     }
 //

@@ -2,7 +2,6 @@ package com.claseipst51android2021cl.grupo4;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

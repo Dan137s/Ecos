@@ -28,6 +28,9 @@ public class MenuActivityInvitado extends AppCompatActivity {
         compartir = (CardView) findViewById(R.id.idcard3);
         iniciarse = (CardView) findViewById(R.id.idcard4);
 
+        //Recordando que los CardView son las tarjetas o botones que enlazan"Botones del menú"
+
+        //Llamo a los metodos
         getUbicacion();
         getListaEco();
         getCompartir();
