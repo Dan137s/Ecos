@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
     //Declaro las vbles, para usar los botones del menu_activity y llamar las sgtes act. dentro de un cardview
@@ -40,6 +41,8 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent im1 = new Intent(MenuActivity.this, MainActivityCreaEco.class);
+                Toast.makeText(getApplicationContext(), "Redirección a crear ecos!",
+                        Toast.LENGTH_SHORT).show();
                 startActivity(im1);
             }
         });
@@ -52,6 +55,8 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent im2 = new Intent(MenuActivity.this, MainActivityLogin.class);
+                Toast.makeText(getApplicationContext(), "Redirección a login!",
+                        Toast.LENGTH_SHORT).show();
                 startActivity(im2);
             }
         });
@@ -65,6 +70,8 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent im3 = new Intent(MenuActivity.this, MainActivityListadoEco.class);
+                Toast.makeText(getApplicationContext(), "Listado de ecos!",
+                        Toast.LENGTH_SHORT).show();
                 startActivity(im3);
             }
         });
@@ -76,6 +83,8 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent im4 = new Intent(MenuActivity.this, MainActivityUbicacion.class);
+                Toast.makeText(getApplicationContext(), "Redirección a ubicación",
+                        Toast.LENGTH_SHORT).show();
                 startActivity(im4);
             }
         });

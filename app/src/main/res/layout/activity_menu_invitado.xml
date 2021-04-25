@@ -23,6 +23,7 @@
             android:text="Ecos_Invitado">
         </TextView>
     </RelativeLayout>
+
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/idGrid"
         android:layout_width="match_parent"
@@ -33,7 +34,7 @@
         android:layout_below="@+id/r1">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/idcard2"
+            android:id="@+id/idcard1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginLeft="10dp"
@@ -70,15 +71,11 @@
                     android:textSize="16sp"
                     android:textStyle="bold"></TextView>
 
-
             </LinearLayout>
-
-
-
-
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/idcard3"
+            android:id="@+id/idcard2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginLeft="10dp"
@@ -115,15 +112,11 @@
                     android:textSize="16sp"
                     android:textStyle="bold"></TextView>
 
-
             </LinearLayout>
-
-
-
-
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/idcard4"
+            android:id="@+id/idcard3"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginLeft="10dp"
@@ -160,15 +153,11 @@
                     android:textSize="16sp"
                     android:textStyle="bold"></TextView>
 
-
             </LinearLayout>
-
-
-
-
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/idcard1"
+            android:id="@+id/idcard4"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginLeft="10dp"
@@ -204,13 +193,8 @@
                     android:textColor="#F44336"
                     android:textSize="16sp"
                     android:textStyle="bold"></TextView>
-
-
             </LinearLayout>
-
-
-
-
         </androidx.cardview.widget.CardView>
+
     </androidx.gridlayout.widget.GridLayout>
 </RelativeLayout>
