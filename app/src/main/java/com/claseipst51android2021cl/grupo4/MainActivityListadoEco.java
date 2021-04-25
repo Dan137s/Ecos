@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MenuActivityInvitado extends AppCompatActivity {
+public class MainActivityListadoEco extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_invitado);
+        setContentView(R.layout.activity_main_listado_eco);
 
         //Titulo de la aplicacion o action bar que lo centre
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);

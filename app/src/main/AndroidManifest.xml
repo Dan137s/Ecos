@@ -6,12 +6,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/noeco"
+        android:icon="@drawable/c"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecos">
-        <activity android:name=".MenuActivityInvitado"></activity>
+        <activity android:name=".MainActivityUbicacion"></activity>
+        <activity android:name=".MainActivityListadoEco" />
+        <activity android:name=".MainActivityCreaEco" />
+        <activity android:name=".MenuActivityInvitado" />
         <activity android:name=".MainActivityRegistrarse" />
         <activity android:name=".MainActivitySesion" />
         <activity android:name=".MainActivityLogin" />
