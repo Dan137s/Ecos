@@ -7,8 +7,8 @@
     android:orientation="vertical">
 
     <TextView
-        android:text="Ecos"
-        android:textSize="18sp"
+        android:text="Ecos V.09 Maqueta"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#ffff"
         android:layout_width="wrap_content"

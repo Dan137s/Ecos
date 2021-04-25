@@ -18,9 +18,9 @@
             android:id="@+id/txtView"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="#EE0F0FEE"
+            android:textColor="#F44336"
             android:layout_centerInParent="true"
-            android:text="Bienvenidos a eco">
+            android:text="Bienvenid@ #User">
         </TextView>
     </RelativeLayout>
     <androidx.gridlayout.widget.GridLayout

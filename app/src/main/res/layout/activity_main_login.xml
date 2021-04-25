@@ -13,6 +13,7 @@
         android:text="Bienvenidos"
         android:textAlignment="center"
         android:textSize="50dp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
@@ -52,6 +53,7 @@
         android:layout_marginBottom="96dp"
         android:text="Invitado"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:onClick="invitado"
 
         android:textSize="15dp"
