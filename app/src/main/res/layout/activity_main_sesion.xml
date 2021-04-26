@@ -21,10 +21,11 @@
 
     <EditText
         android:id="@+id/txtCorreoSesion"
-        android:layout_width="380dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="450dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="Ingrese su correo"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/txtContraseñaSesion"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,10 +34,11 @@
 
     <EditText
         android:id="@+id/txtContraseñaSesion"
-        android:layout_width="380dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="450dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="Ingrese su contraseña"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btnIngresarSesion"
         app:layout_constraintEnd_toEndOf="parent"

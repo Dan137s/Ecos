@@ -21,11 +21,13 @@
 
     <EditText
         android:id="@+id/txtCorreoRegistrese"
-        android:layout_width="380dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="450dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="Ingrese su correo"
         android:inputType="textEmailAddress"
+
         app:layout_constraintBottom_toTopOf="@+id/txtContraseñaRegistrese"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
@@ -33,10 +35,11 @@
 
     <EditText
         android:id="@+id/txtContraseñaRegistrese"
-        android:layout_width="380dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="92dp"
+        android:layout_width="450dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="Ingrese su contraseña"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistrese"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,11 +48,12 @@
 
     <EditText
         android:id="@+id/txtNombreRegistrese"
-        android:layout_width="380dp"
-        android:layout_height="61dp"
+        android:layout_width="450dp"
+        android:layout_height="70dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="Ingrese su nombre"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/txtCorreoRegistrese"
         app:layout_constraintEnd_toEndOf="parent"
