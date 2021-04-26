@@ -20,6 +20,7 @@ public class MainActivityUbicacion extends AppCompatActivity {
         //Titulo de la aplicacion o action bar que lo centre
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.txt_titulo);
+
         //Flecha volver
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

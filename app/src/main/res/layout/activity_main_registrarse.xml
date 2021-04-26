@@ -21,7 +21,7 @@
 
     <EditText
         android:id="@+id/txtCorreoRegistrese"
-        android:layout_width="450dp"
+        android:layout_width="400dp"
         android:layout_height="70dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
@@ -35,7 +35,7 @@
 
     <EditText
         android:id="@+id/txtContraseñaRegistrese"
-        android:layout_width="450dp"
+        android:layout_width="400dp"
         android:layout_height="70dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
@@ -48,7 +48,7 @@
 
     <EditText
         android:id="@+id/txtNombreRegistrese"
-        android:layout_width="450dp"
+        android:layout_width="400dp"
         android:layout_height="70dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"

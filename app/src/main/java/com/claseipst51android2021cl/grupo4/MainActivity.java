@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSplash();
     }
-//
+//Este es el metodo para pasar del splash screen a la parte login
     private void getSplash() {
         new Handler().postDelayed(new Runnable() {
             @Override

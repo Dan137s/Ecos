@@ -24,6 +24,7 @@ public class MainActivityCompartirApp extends AppCompatActivity {
         //Flecha atras
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+    //Metodo para volver atras de la flechita back
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){

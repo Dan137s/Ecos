@@ -22,7 +22,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.txt_titulo);
 
-        //castear referenciar las vbles con las del menu_activity por vble+id
+        //Castear referenciar las vbles con las del menu_activity por vble+id
         ubicacion = (CardView) findViewById(R.id.idcard1);
         listadoeco = (CardView) findViewById(R.id.idcard2);
         compartir = (CardView) findViewById(R.id.idcard3);
@@ -37,6 +37,10 @@ public class MenuActivityInvitado extends AppCompatActivity {
         getIniciarSe();
     }
 
+    //Metodos para los botones solo redireccion a pestañas"Activities":
+    // Ubicación, Lista Ecos, Compartir la app, Iniciar sesión.
+
+        //Ubicación
     private void getUbicacion() {
             ubicacion.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -49,6 +53,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
             });
         }
 
+        //Lista ecos
     private void getListaEco() {
             listadoeco.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -61,6 +66,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
             });
         }
 
+        //Compartir la app
     private void getCompartir() {
         compartir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +79,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
         });
     }
 
+        //Iniciar Sesión
     private void getIniciarSe() {
         iniciarse.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -21,7 +21,7 @@
 
     <EditText
         android:id="@+id/txtCorreoSesion"
-        android:layout_width="450dp"
+        android:layout_width="400dp"
         android:layout_height="70dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
@@ -34,7 +34,7 @@
 
     <EditText
         android:id="@+id/txtContraseñaSesion"
-        android:layout_width="450dp"
+        android:layout_width="400dp"
         android:layout_height="70dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
