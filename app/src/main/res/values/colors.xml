@@ -9,5 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorBoton1">#69027A</color>
     <color name="colorBoton2">#FF5722</color>
-    <color name="colorBoton3">#1969A8</color>
+    <color name="colorBoton3">#1EFF5722</color>
+    <color name="colorBoton4">#FFFFFF</color>
+    <color name="colorBoton5">#1969A8</color>
+    <color name="colorBoton6">#1969A8</color>
+    <color name="colorBoton7">#1969A8</color>
+    <color name="colorBoton8">#1969A8</color>
 </resources>

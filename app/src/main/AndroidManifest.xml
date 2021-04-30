@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecos">
-        <activity android:name=".MainActivityCompartirApp"></activity>
+        <activity android:name=".MainActivityAdmin"></activity>
+        <activity android:name=".MainActivityCompartirApp" />
         <activity android:name=".MainActivityUbicacion" />
         <activity android:name=".MainActivityListadoEco" />
         <activity android:name=".MainActivityCreaEco" />

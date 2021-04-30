@@ -20,7 +20,7 @@ public class MainActivityLogin extends AppCompatActivity {
     }
 
     public void ingresar(View view) {
-        Intent i1 = new Intent(this, MainActivitySesion.class);
+        Intent i1 = new Intent(this, MainActivityAdmin.class);
         Toast.makeText(getApplicationContext(), "Ingrese sus credenciales",
                 Toast.LENGTH_SHORT).show();
         startActivity(i1);
