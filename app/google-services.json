@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "345141142081",
+    "project_id": "ecos-42a6e",
+    "storage_bucket": "ecos-42a6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345141142081:android:24f332fde5286cfe009cc0",
+        "android_client_info": {
+          "package_name": "com.claseipst51android2021cl.grupo4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345141142081-0tvq1b38h3cdh65elilv00a3rilmphrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX78S5yWgkdA2jxAojLPiyCk3WcFFNYxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345141142081-0tvq1b38h3cdh65elilv00a3rilmphrn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
