@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.muddzdev.styleabletoast.StyleableToast;
+
 public class MainActivityLogin extends AppCompatActivity {
 
     @Override
@@ -21,8 +23,10 @@ public class MainActivityLogin extends AppCompatActivity {
 
     public void ingresar(View view) {
         Intent i1 = new Intent(this, MainActivitySesion.class);
-        Toast.makeText(getApplicationContext(), "Ingrese sus credenciales",
-                Toast.LENGTH_SHORT).show();
+
+        StyleableToast.makeText(getApplicationContext(), "Ingrese sus credenciales",
+                Toast.LENGTH_LONG, R.style.ColoredStroke).show();
+
         startActivity(i1);
 
     }
