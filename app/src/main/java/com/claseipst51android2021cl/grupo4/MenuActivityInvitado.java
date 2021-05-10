@@ -84,7 +84,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
         iniciarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im3 = new Intent(MenuActivityInvitado.this, MainActivityLogin.class);
+                Intent im3 = new Intent(MenuActivityInvitado.this, MainActivityAdmin.class);
                 Toast.makeText(getApplicationContext(), "Ayudanos a compartir la app!",
                         Toast.LENGTH_SHORT).show();
                 startActivity(im3);

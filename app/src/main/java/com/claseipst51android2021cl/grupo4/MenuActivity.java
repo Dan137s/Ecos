@@ -54,7 +54,7 @@ public class MenuActivity extends AppCompatActivity {
         cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im2 = new Intent(MenuActivity.this, MainActivityLogin.class);
+                Intent im2 = new Intent(MenuActivity.this, MainActivityAdmin.class);
                 Toast.makeText(getApplicationContext(), "Redirección a login!",
                         Toast.LENGTH_SHORT).show();
                 startActivity(im2);
