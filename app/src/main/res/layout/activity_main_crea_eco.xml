@@ -6,18 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivityCreaEco">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="267dp"
+    <Button
+        android:id="@+id/btn_rec"
+        android:layout_width="128dp"
         android:layout_height="128dp"
-        android:text="Crear eco"
+        android:background="@drawable/recr"
+        android:onClick="Recorder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.582" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="@drawable/reproducir"
+        android:onClick="reproducir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.582" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grabadora"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="50dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintVertical_bias="0.134" />
 </androidx.constraintlayout.widget.ConstraintLayout>
