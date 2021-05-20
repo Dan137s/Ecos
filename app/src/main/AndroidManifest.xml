@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.claseipst51android2021cl.grupo4">
-    <!--Le otorge permisos de usuario-->
-    <!--Internet-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--Location-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <!--Grabación-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- Le otorge permisos de usuario -->
+    <!-- Internet -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Grabación -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/c"
@@ -16,12 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecos">
-        <activity android:name=".MainActivityRestablecerClave"></activity>
+        <activity android:name=".MainActivityCreaEco"></activity>
+        <activity android:name=".MainActivityRestablecerClave" />
         <activity android:name=".MainActivityAdmin" />
         <activity android:name=".MainActivityCompartirApp" />
         <activity android:name=".MainActivityUbicacion" />
         <activity android:name=".MainActivityListadoEco" />
-        <activity android:name=".MainActivityCreaEco" />
         <activity android:name=".MenuActivityInvitado" />
         <activity android:name=".MainActivityRegistrarse" />
         <activity android:name=".MainActivitySesion" />
