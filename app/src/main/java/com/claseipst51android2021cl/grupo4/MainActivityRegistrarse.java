@@ -65,7 +65,7 @@ public class MainActivityRegistrarse extends AppCompatActivity {
 
     //Btn volver me regresa hasta login
     public void regresar(View view){
-        Intent i2 = new Intent(this, MainActivityLogin.class);
+        Intent i2 = new Intent(this, MainActivityInicio.class);
         Toast.makeText(getApplicationContext(), "Back inicio",
                 Toast.LENGTH_SHORT).show();
         startActivity(i2);

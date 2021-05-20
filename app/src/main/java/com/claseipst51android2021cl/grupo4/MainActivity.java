@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
-//En esta activity es la principal donde va el tiempo del splash screen
+//En esta activity es la principal donde empieza con un splash screen
 public class MainActivity extends AppCompatActivity {
     //Tiempo de duración del gift
     private final int DURACION_SPLASH = 5000;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i1 = new Intent(MainActivity.this, MainActivityAdmin.class);
+                Intent i1 = new Intent(MainActivity.this, MainActivityInicio.class);
                 startActivity(i1);
                 finish();
             }

@@ -107,7 +107,7 @@ public class MainActivityAdmin extends AppCompatActivity {
 
 
     public void invitado(View view) {
-        Intent i3 = new Intent(this, MenuActivityInvitado.class);
+        Intent i3 = new Intent(this, MainActivityInicio.class);
         startActivity(i3);
     }
 }

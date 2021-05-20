@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecos">
-        <activity android:name=".MainActivityCreaEco"></activity>
+        <activity android:name=".MainActivityInicio"></activity>
+        <activity android:name=".MainActivityCreaEco" />
         <activity android:name=".MainActivityRestablecerClave" />
         <activity android:name=".MainActivityAdmin" />
         <activity android:name=".MainActivityCompartirApp" />
@@ -24,7 +25,6 @@
         <activity android:name=".MenuActivityInvitado" />
         <activity android:name=".MainActivityRegistrarse" />
         <activity android:name=".MainActivitySesion" />
-        <activity android:name=".MainActivityLogin" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
