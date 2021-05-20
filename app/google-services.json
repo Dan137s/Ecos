@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "515943851928",
-    "project_id": "ecos-deb1e",
-    "storage_bucket": "ecos-deb1e.appspot.com"
+    "project_number": "920715069043",
+    "project_id": "ecos-8af2a",
+    "storage_bucket": "ecos-8af2a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:515943851928:android:8714267f089d65ede46ded",
+        "mobilesdk_app_id": "1:920715069043:android:68f40498419befa1d40c06",
         "android_client_info": {
           "package_name": "com.claseipst51android2021cl.grupo4"
         }
       },
       "oauth_client": [
         {
-          "client_id": "515943851928-7bjch0nsun0k0eb53rc8g2tbr3nk7nf2.apps.googleusercontent.com",
+          "client_id": "920715069043-kgnqioniqea9vp4vki2sh19s912l24rn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.claseipst51android2021cl.grupo4",
-            "certificate_hash": "a05ef6cf99dc561a437c5a027ea7a85cd700ab2e"
+            "certificate_hash": "29727d688f099308d26bfed9a7f31da93b533d78"
           }
         },
         {
-          "client_id": "515943851928-0p6dq7vhd77n8ccjmbklhf73k8msac2i.apps.googleusercontent.com",
+          "client_id": "920715069043-5ehb2ndvggoagu3u03l3ilj57t8q3m2t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDKYRjCHOq1oC_FyaTZEDiIdC2i1X7a9KM"
+          "current_key": "AIzaSyBjOozh5d_YymHNh4EayA-i8CWhvsdQizo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "515943851928-0p6dq7vhd77n8ccjmbklhf73k8msac2i.apps.googleusercontent.com",
+              "client_id": "920715069043-5ehb2ndvggoagu3u03l3ilj57t8q3m2t.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
