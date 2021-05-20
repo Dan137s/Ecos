@@ -188,7 +188,7 @@
                     android:layout_centerInParent="true"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="Iniciar Sesión"
+                    android:text="Back inicio"
                     android:textAlignment="center"
                     android:textColor="#F44336"
                     android:textSize="16sp"

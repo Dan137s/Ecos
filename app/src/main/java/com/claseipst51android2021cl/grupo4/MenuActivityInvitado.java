@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.muddzdev.styleabletoast.StyleableToast;
+
 public class MenuActivityInvitado extends AppCompatActivity {
     //Declaro las vbles, para usar los botones del menu_activity y llamar las sgtes act. dentro de un cardview
     CardView ubicacion, listadoeco, compartir, iniciarse;
@@ -79,14 +81,14 @@ public class MenuActivityInvitado extends AppCompatActivity {
         });
     }
 
-        //Iniciar Sesión
+        //Back inicio
     private void getIniciarSe() {
         iniciarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im3 = new Intent(MenuActivityInvitado.this, MainActivityAdmin.class);
-                Toast.makeText(getApplicationContext(), "Ayudanos a compartir la app!",
-                        Toast.LENGTH_SHORT).show();
+                Intent im3 = new Intent(MenuActivityInvitado.this, MainActivityInicio.class);
+                StyleableToast.makeText(getApplicationContext(), "Bienvenidos a Ecos",
+                        Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                 startActivity(im3);
             }
         });
