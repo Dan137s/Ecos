@@ -34,7 +34,7 @@ public class MainActivityInicio extends AppCompatActivity {
     }
 
     public void registrar(View view) {
-        Intent i2 = new Intent(this, MainActivityRegistrarse.class);
+        Intent i2 = new Intent(this, MainActivityResgistroUser.class);
 
         startActivity(i2);
 
