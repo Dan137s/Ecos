@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecos">
-        <activity android:name=".MainActivityResgistroUser"></activity>
+        <activity android:name=".MainActivityResgistroUser" />
         <activity android:name=".MainActivityInicio" />
         <activity android:name=".MainActivityCreaEco" />
         <activity android:name=".MainActivityRestablecerClave" />
