@@ -53,14 +53,14 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     private Chronometer timer;
 
     public RecordFragment() {
-        // Required empty public constructor
+        //Constructor público vacío requerido
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        //Inflar el diseño de este fragmento
         return inflater.inflate(R.layout.fragment_record, container, false);
     }
 
@@ -68,15 +68,15 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //Intitialize Variables
+        //Inicializar variables
         navController = Navigation.findNavController(view);
         listBtn = view.findViewById(R.id.record_list_btn);
         recordBtn = view.findViewById(R.id.record_btn);
         timer = view.findViewById(R.id.record_timer);
         filenameText = view.findViewById(R.id.record_filename);
 
-        /* Setting up on click listener
-           - Class must implement 'View.OnClickListener' and override 'onClick' method
+        /* Configuración de escucha de clics
+            - La clase debe implementar 'View.OnClickListener' y anular el método 'onClick'
          */
         listBtn.setOnClickListener(this);
         recordBtn.setOnClickListener(this);
@@ -86,13 +86,13 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        /*  Check, which button is pressed and do the task accordingly
+        /*  Verifique qué botón está presionado y realice la tarea en consecuencia
          */
         switch (v.getId()) {
             case R.id.record_list_btn:
                 /*
-                Navigation Controller
-                Part of Android Jetpack, used for navigation between both fragments
+                  Controlador de navegación
+                  Parte de Android Jetpack, que se utiliza para la navegación entre ambos fragmentos.
                  */
                 if(isRecording){
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
@@ -104,8 +104,8 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
                         }
                     });
                     alertDialog.setNegativeButton("CANCEL", null);
-                    alertDialog.setTitle("Audio Still recording");
-                    alertDialog.setMessage("Are you sure, you want to stop the recording?");
+                    alertDialog.setTitle("Grabación de audio fija");
+                    alertDialog.setMessage("¿Estás seguro de que quieres detener la grabación?");
                     alertDialog.create().show();
                 } else {
                     navController.navigate(R.id.action_recordFragment_to_audioListFragment);
@@ -114,19 +114,19 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
             case R.id.record_btn:
                 if(isRecording) {
-                    //Stop Recording
+                    //Para de grabar
                     stopRecording();
 
-                    // Change button image and set Recording state to false
+                    //Cambiar la imagen del botón y establecer el estado de grabación en falso
                     recordBtn.setImageDrawable(getResources().getDrawable(R.drawable.record_btn_stopped, null));
                     isRecording = false;
                 } else {
-                    //Check permission to record audio
+                    //Verifica el permiso para grabar audio
                     if(checkPermissions()) {
-                        //Start Recording
+                        //Iniciar la grabación
                         startRecording();
 
-                        // Change button image and set Recording state to false
+                        //Cambiar la imagen del botón y establecer el estado de grabación en falso
                         recordBtn.setImageDrawable(getResources().getDrawable(R.drawable.record_btn_recording, null));
                         isRecording = true;
                     }
@@ -136,36 +136,36 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     }
 
     private void stopRecording() {
-        //Stop Timer, very obvious
+        //Temporizador de parada, muy obvio xD
         timer.stop();
 
-        //Change text on page to file saved
-        filenameText.setText("Recording Stopped, File Saved : " + recordFile);
+        //Cambiar el texto de la página al archivo guardado
+        filenameText.setText("Grabación detenida, archivo guardado : " + recordFile);
 
-        //Stop media recorder and set it to null for further use to record new audio
+        //Detenga la grabadora de medios y configúrela en nulo para su uso posterior para grabar audio nuevo
         mediaRecorder.stop();
         mediaRecorder.release();
         mediaRecorder = null;
     }
 
     private void startRecording() {
-        //Start timer from 0
+        //Iniciar temporizador desde 0
         timer.setBase(SystemClock.elapsedRealtime());
         timer.start();
 
-        //Get app external directory path
+        //Obtener la ruta del directorio externo de la aplicación
         String recordPath = getActivity().getExternalFilesDir("/").getAbsolutePath();
 
-        //Get current date and time
+        //Obtener la fecha y hora actual
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss", Locale.CANADA);
         Date now = new Date();
 
-        //initialize filename variable with date and time at the end to ensure the new file wont overwrite previous file
+        //Inicializar la variable de nombre de archivo con la fecha y la hora al final para asegurarse de que el nuevo archivo no sobrescriba el archivo anterior
         recordFile = "Recording_" + formatter.format(now) + ".3gp";
 
-        filenameText.setText("Recording, File Name : " + recordFile);
+        filenameText.setText("Grabación, nombre de archivo : " + recordFile);
 
-        //Setup Media Recorder for recording
+        //Configurar Media Recorder para grabar
         mediaRecorder = new MediaRecorder();
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
@@ -178,17 +178,17 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
             e.printStackTrace();
         }
 
-        //Start Recording
+        //Iniciar la grabación
         mediaRecorder.start();
     }
 
     private boolean checkPermissions() {
-        //Check permission
+        //Verificar permiso
         if (ActivityCompat.checkSelfPermission(getContext(), recordPermission) == PackageManager.PERMISSION_GRANTED) {
-            //Permission Granted
+            //Permiso concedido
             return true;
         } else {
-            //Permission not granted, ask for permission
+            //Permiso no otorgado, pedir permiso
             ActivityCompat.requestPermissions(getActivity(), new String[]{recordPermission}, PERMISSION_CODE);
             return false;
         }

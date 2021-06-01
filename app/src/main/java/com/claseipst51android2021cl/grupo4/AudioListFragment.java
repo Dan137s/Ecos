@@ -42,7 +42,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
 
     private File fileToPlay = null;
 
-    //UI Elements
+    //Elementos de la interfaz de usuario
     private ImageButton playBtn;
     private TextView playerHeader;
     private TextView playerFilename;
@@ -52,7 +52,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
     private Runnable updateSeekbar;
 
     public AudioListFragment() {
-        // Required empty public constructor
+        //Constructor público vacío requerido
     }
 
     @Override
