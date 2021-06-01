@@ -15,4 +15,8 @@
     <color name="colorBoton6">#1969A8</color>
     <color name="colorBoton7">#1969A8</color>
     <color name="colorBoton8">#1969A8</color>
+    <color name="colorDarkBlue">#3D4054</color>
+    <color name="colorPrimary">#6177FC</color>
+    <color name="colorPrimaryDark">#576EF7</color>
+    <color name="colorAccent">#FF6584</color>
 </resources>

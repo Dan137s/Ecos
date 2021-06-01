@@ -40,7 +40,7 @@ public class MenuActivity extends AppCompatActivity {
         creaeco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im1 = new Intent(MenuActivity.this, MainActivityCreaEco.class);
+                Intent im1 = new Intent(MenuActivity.this, MainActivityGrabadora1.class);
                 Toast.makeText(getApplicationContext(), "Redirección a crear ecos!",
                         Toast.LENGTH_SHORT).show();
                 startActivity(im1);
