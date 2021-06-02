@@ -39,7 +39,7 @@
             android:fontFamily="@font/open_sans_semibold"
             android:paddingTop="24dp"
             android:paddingBottom="24dp"
-            android:text="Media Player"
+            android:text="Reproductor"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
 
@@ -52,7 +52,7 @@
             android:paddingTop="24dp"
             android:paddingEnd="24dp"
             android:paddingBottom="24dp"
-            android:text="Not Playing"
+            android:text="Sonido detenido"
             android:textAlignment="textEnd"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
@@ -63,7 +63,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="File Name"
+        android:text="Nombre del archivo "
         android:fontFamily="@font/open_sans_semibold"
         android:textColor="@android:color/white"
         android:textSize="16sp"
@@ -115,6 +115,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

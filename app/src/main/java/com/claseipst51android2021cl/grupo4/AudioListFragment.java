@@ -24,9 +24,8 @@ import java.io.File;
 import java.io.IOException;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+//Subclase que extiende de fragment {@link Fragment} simple.
+
 public class AudioListFragment extends Fragment implements AudioListAdapter.onItemListClick {
 
     private ConstraintLayout playerSheet;
@@ -58,7 +57,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        //Inflar el diseño de este fragmento
         return inflater.inflate(R.layout.fragment_audio_list, container, false);
     }
 
@@ -96,7 +95,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
 
             @Override
             public void onSlide(@NonNull View bottomSheet, float slideOffset) {
-                //We cant do anything here for this app
+
             }
         });
 
