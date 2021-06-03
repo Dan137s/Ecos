@@ -14,7 +14,7 @@ public class MainActivityCreaEco extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_crea_eco);
 
-        //Titulo de la aplicacion o action bar que lo centre
+        //Titulo de la aplicación o action bar que lo centre
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.txt_titulo);
 

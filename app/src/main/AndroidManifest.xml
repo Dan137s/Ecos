@@ -3,10 +3,10 @@
     package="com.claseipst51android2021cl.grupo4">
     <!-- Le otorge permisos de usuario -->
     <!-- Internet -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- Location -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Grabación -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Internet -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Location-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Almacenamiento -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /><!-- Grabación -->
 
 
     <application

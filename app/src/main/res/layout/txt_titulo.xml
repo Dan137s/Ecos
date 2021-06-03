@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:text="Ecos version 1.36 Maqueta"
+        android:text="Ecos version 1.38 Maqueta"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#ffff"
