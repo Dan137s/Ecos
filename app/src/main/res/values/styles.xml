@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-        <!-- Base application theme. -->
+        <!-- Barra de acción. -->
         <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
             <item name="colorPrimary">@color/purple_500</item>
             <item name="colorPrimaryVariant">@color/purple_700</item>
             <item name="colorOnPrimary">@color/white</item>
         </style>
+
 
         <style name="DemoButton" parent="Base.Widget.AppCompat.Button">
             <item name="android:layout_width">match_parent</item>

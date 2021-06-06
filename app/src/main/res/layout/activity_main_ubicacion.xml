@@ -4,19 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBoton4"
     tools:context=".MainActivityUbicacion">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="262dp"
-        android:layout_height="152dp"
-        android:text="Ubicación"
-        android:textAlignment="center"
-        android:textSize="50dp"
-        android:textColor="#000000"
-
+    <LinearLayout
+        android:layout_width="407dp"
+        android:layout_height="595dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="139dp"
+                app:srcCompat="@drawable/googlemaps" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25px"
+            android:text="Sitios Turisticos" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25px"
+            android:text="Tipos de Mapas" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25px"
+            android:text="Mi ubicación" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
