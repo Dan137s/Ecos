@@ -8,9 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivityUbicacion extends AppCompatActivity {
+
+    //Declaro e importo lo que usare "Botones"
+    Button btnSitios, btnUbicacion, btnTipos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,17 @@ public class MainActivityUbicacion extends AppCompatActivity {
 
         //Flecha volver
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        //Agrego los valores o casteo los botones por su id
+        btnSitios = (Button) findViewById(R.id.btn_Sitios);
+        btnSitios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (getApplicationContext(),MapsActivity1.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //Metodo para la flecha y volver atras
@@ -36,3 +52,13 @@ public class MainActivityUbicacion extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
+
+
+
+
+
+
+
+
+

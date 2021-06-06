@@ -29,21 +29,21 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_Sitios"
             android:layout_width="350dp"
             android:layout_height="80dp"
             android:layout_marginTop="25px"
             android:text="Sitios Turisticos" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_Tipos"
             android:layout_width="350dp"
             android:layout_height="80dp"
             android:layout_marginTop="25px"
             android:text="Tipos de Mapas" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btn_Ubicacion"
             android:layout_width="350dp"
             android:layout_height="80dp"
             android:layout_marginTop="25px"
