@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="96dp"
         android:onClick="invitado"
-        android:text="Invitado"
+        android:text="Home invitad@s"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20dp"

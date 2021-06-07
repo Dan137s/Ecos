@@ -48,8 +48,8 @@ public class MenuActivityInvitado extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent im1 = new Intent(MenuActivityInvitado.this, MainActivityUbicacion.class);
-                    Toast.makeText(getApplicationContext(), "Redirección a ubicación",
-                            Toast.LENGTH_SHORT).show();
+                    StyleableToast.makeText(getApplicationContext(), "Re-direccion ubicación",
+                            Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                     startActivity(im1);
                 }
             });
@@ -61,8 +61,8 @@ public class MenuActivityInvitado extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent im3 = new Intent(MenuActivityInvitado.this, MainActivityListadoEco.class);
-                    Toast.makeText(getApplicationContext(), "listado de ecos!",
-                            Toast.LENGTH_SHORT).show();
+                    StyleableToast.makeText(getApplicationContext(), "Re-direccion Listado de Ecos",
+                            Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                     startActivity(im3);
                 }
             });
@@ -74,8 +74,8 @@ public class MenuActivityInvitado extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent im3 = new Intent(MenuActivityInvitado.this, MainActivityCompartirApp.class);
-                Toast.makeText(getApplicationContext(), "Ayudanos a compartir la app!",
-                        Toast.LENGTH_SHORT).show();
+                StyleableToast.makeText(getApplicationContext(), "Compartamos nuestra app",
+                        Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                 startActivity(im3);
             }
         });

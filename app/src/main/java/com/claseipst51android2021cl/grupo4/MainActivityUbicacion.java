@@ -29,17 +29,28 @@ public class MainActivityUbicacion extends AppCompatActivity {
         //Flecha volver
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         //Agrego los valores o casteo los botones por su id
-        btnSitios = (Button) findViewById(R.id.btn_Sitios);
+        btnSitios = (Button) findViewById(R.id.btn_Sitios); //i1
+        btnUbicacion = (Button) findViewById(R.id.btn_Ubicacion); //i2
+
         btnSitios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (getApplicationContext(),MapsActivity1.class);
-                startActivity(intent);
+                Intent i1 = new Intent (getApplicationContext(),MapsActivity1.class);
+                startActivity(i1);
+            }
+        });
+
+        btnUbicacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent (getApplicationContext(),MapsActivity1.class);
+                startActivity(i2);
             }
         });
     }
+
+
 
     //Metodo para la flecha y volver atras
     @Override

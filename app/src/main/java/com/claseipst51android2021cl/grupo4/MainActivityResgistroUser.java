@@ -121,6 +121,8 @@ public class MainActivityResgistroUser extends AppCompatActivity {
                             if (task2.isSuccessful()){
                                 startActivity(new Intent(MainActivityResgistroUser.this, MainActivityInicio.class));
                                 finish();
+                                StyleableToast.makeText(getApplicationContext(), "Usuario Registrado",
+                                        Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                             }
                             else{
                                 StyleableToast.makeText(getApplicationContext(), "No se puedieron crear los datos correctamente!",

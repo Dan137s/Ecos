@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBoton4"
+    android:background="@drawable/wallpcmptrapp2"
     tools:context=".MainActivityUbicacion">
 
     <LinearLayout
@@ -25,29 +25,37 @@
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="139dp"
-                app:srcCompat="@drawable/googlemaps" />
+                app:srcCompat="@drawable/mapiconubica1" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_Sitios"
-            android:layout_width="350dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="25px"
-            android:text="Sitios Turisticos" />
-
-        <Button
-            android:id="@+id/btn_Tipos"
-            android:layout_width="350dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="25px"
-            android:text="Tipos de Mapas" />
 
         <Button
             android:id="@+id/btn_Ubicacion"
-            android:layout_width="350dp"
-            android:layout_height="80dp"
+            android:layout_width="450dp"
+            android:layout_height="100dp"
             android:layout_marginTop="25px"
-            android:text="Mi ubicación" />
+            android:text="Mi ubicación"
+            android:textSize="30sp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_Sitios"
+            android:layout_width="450dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="25px"
+            android:text="Sitios Turisticos"
+            android:textSize="30sp"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_Tipos"
+            android:layout_width="450dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="25px"
+            android:text="Tipos de Mapas"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
