@@ -16,13 +16,14 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.claseipst51android2021cl.grupo4.databinding.ActivityMaps1Binding;
 
 public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallback {
-
+    //Variable privada de googlemaps
     private GoogleMap mMap;
     private ActivityMaps1Binding binding;
 
@@ -40,7 +41,10 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         getLocalizacion();
     }
 
+
+    //Metodo de Geolocalización
     private void getLocalizacion() {
+
         int permiso = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
         if(permiso == PackageManager.PERMISSION_DENIED){
             if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
@@ -50,10 +54,12 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         }
     }
 
+    //La variable onMapReady que recibe los parametros desde el permiso en el manifest de localizacion
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -69,10 +75,12 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
 
         LocationManager locationManager = (LocationManager) MapsActivity1.this.getSystemService(Context.LOCATION_SERVICE);
         LocationListener locationListener = new LocationListener() {
+
+            //Este es el metodo de cambio de ubicacion actual latitud y longitud
             @Override
             public void onLocationChanged(Location location) {
                 LatLng miUbicacion = new LatLng(location.getLatitude(), location.getLongitude());
-                mMap.addMarker(new MarkerOptions().position(miUbicacion).title("ubicacion actual"));
+                mMap.addMarker(new MarkerOptions().position(miUbicacion).title("Ubicación actual"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(miUbicacion));
                 CameraPosition cameraPosition = new CameraPosition.Builder()
                         .target(miUbicacion)
@@ -102,6 +110,11 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
 
 
+
+        // Ubicación test pacos ql
+        LatLng LosPaco = new LatLng(-29.915932308757732, -71.21836450174372);
+        mMap.addMarker(new MarkerOptions().position(LosPaco).title("Carabineros de la nación").snippet("si el mal acecha la paz del nido jajaj pacos c.t.m.!@#$%&/!").icon(BitmapDescriptorFactory.fromResource(R.drawable.icoeco2)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(LosPaco));
     }
 }
 

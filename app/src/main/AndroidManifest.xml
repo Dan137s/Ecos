@@ -13,19 +13,14 @@
     <!-- Internet -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- Internet -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Almacenamiento -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Grabar audio -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /><!-- Location -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Location -->
     <uses-permission android:name="android.hardware.location.gps" /> <!-- GPS -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/c"
         android:label="@string/app_name"
-
-
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecos">
@@ -43,8 +38,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MapsActivity2"
+            android:label="@string/title_activity_maps2"></activity>
+        <activity
             android:name=".MapsActivity1"
-            android:label="@string/title_activity_maps1"></activity>
+            android:label="@string/title_activity_maps1" />
         <activity android:name=".MainActivityGrabadora1" />
         <activity android:name=".MainActivityResgistroUser" />
         <activity android:name=".MainActivityInicio" />

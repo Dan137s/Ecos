@@ -36,7 +36,7 @@ public class MainActivityUbicacion extends AppCompatActivity {
         btnSitios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i1 = new Intent (getApplicationContext(),MapsActivity1.class);
+                Intent i1 = new Intent (getApplicationContext(),MapsActivity2.class);
                 startActivity(i1);
             }
         });
