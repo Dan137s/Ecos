@@ -16,6 +16,7 @@ public class MainActivityUbicacion extends AppCompatActivity {
     //Declaro e importo lo que usare "Botones"
     Button btnSitios, btnUbicacion, btnTipos;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,9 @@ public class MainActivityUbicacion extends AppCompatActivity {
         //Agrego los valores o casteo los botones por su id
         btnUbicacion = (Button) findViewById(R.id.btn_Ubicacion); //i1
         btnSitios = (Button) findViewById(R.id.btn_Sitios); //i2
-        btnTipos = (Button) findViewById(R.id.btn_Tipos); //i3
+
+
+
 
         /**Eventos de botones **/
 
@@ -53,12 +56,7 @@ public class MainActivityUbicacion extends AppCompatActivity {
         });
     }
 
-    //Este evento de boton esta afuera del OnCreate para crear mas codigo que usare + adelante
-    public void MapaSitios(View v)
-    {
-        Intent i3 = new Intent (getApplicationContext(),MapsActivityTipos.class);
-        startActivity(i3);
-    }
+
 
     //Metodo para la flecha y volver atras
     @Override

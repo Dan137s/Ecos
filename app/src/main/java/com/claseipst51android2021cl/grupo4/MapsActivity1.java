@@ -34,6 +34,7 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         binding = ActivityMaps1Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 

@@ -44,18 +44,10 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="25px"
-            android:text="Sitios Turisticos"
+            android:text="Zona Turistica"
             android:textSize="30sp" />
 
-        <Button
-            android:onClick="MapaSitios"
-            android:id="@+id/btn_Tipos"
-            android:layout_width="450dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="25px"
-            android:text="Tipos de Mapas"
-            android:textSize="30sp" />
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
