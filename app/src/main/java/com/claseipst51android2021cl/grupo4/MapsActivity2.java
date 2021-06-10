@@ -5,6 +5,8 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -24,6 +26,7 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnInfo
 
     private GoogleMap mMap;
     private ActivityMaps2Binding binding;
+    private Button btn_hibrido, btn_normal, btn_satelital, btn_terreno;
 
     //Variable de tipo marcador para añadir despues manualmente los marcadores o usar los mmap
     private Marker markerPrueba;
@@ -43,6 +46,30 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnInfo
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        //Casteo de los botones
+        btn_hibrido = (Button) findViewById(R.id.btn_hibrido);
+        btn_satelital = (Button) findViewById(R.id.btn_satelital);
+        btn_normal = (Button) findViewById(R.id.btn_normal);
+        btn_terreno = (Button) findViewById(R.id.btn_terreno);
+    }
+
+    //Aqui cargara el mapa segun la version seleccionada con el evento del boton
+    public void CambiarHibrido(View view)
+    {
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+    }
+    public void CambiarSatelital(View view)
+    {
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+    }
+    public void CambiarTerreno(View view)
+    {
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+    }
+    public void CambiarNormal(View view)
+    {
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
 
     @Override

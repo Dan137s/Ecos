@@ -27,7 +27,7 @@ public class MapsActivityTipos extends FragmentActivity implements OnMapReadyCal
         binding = ActivityMapsTiposBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        // Obtenga SupportMapFragment y reciba una notificación cuando el mapa esté listo para usarse.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
