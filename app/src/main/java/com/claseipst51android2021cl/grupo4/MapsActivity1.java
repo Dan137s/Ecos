@@ -110,6 +110,13 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
 
 
+        // Ubicación Pais Chile principal no Australia, sidney ya bueno disney
+        LatLng CpCL = new LatLng(-33.43782949348624, -70.65044066638902);
+        mMap.addMarker(new MarkerOptions().position(CpCL).title("Chile").snippet("Capital de chile, Santiago Región Metropolitana").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(CpCL));
+
+        //Este es para centrar la vista o camara al cargar el mapa en una ubicacion predeterminada + un zoom
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CpCL,5));
 
         // Ubicación test pacos ql
         LatLng LosPaco = new LatLng(-29.915932308757732, -71.21836450174372);
