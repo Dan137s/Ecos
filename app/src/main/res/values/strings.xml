@@ -5,4 +5,13 @@
     <string name="title_activity_maps1">Mi ubicación actual</string>
     <string name="title_activity_maps2">Mapa de zonas turisticas</string>
     <string name="marker_detail_latlng">(%1$.2f, %2$.2f)</string>
+
+    <string name="Regimientoinfo">1898 el Regimiento de Artillería n.º 2 es instalado en La Serena,
+        ocupando como cuartel el claustro de la Iglesia de Los Capuchinos hasta 1906.
+        Por decreto de octubre de 1898 se le otorga el nombre de «Arica» (Regimiento de Artillería n.º 2 «Arica»),
+        por su participación en el Asalto y Toma del Morro de Arica, durante la Guerra del Pacífico.
+        En 1906, el cuartel del regimiento se trasladada a la cima del cerro Santa Lucía de ciudad de La Serena.
+        En 1937 adquiere como patronímico de la unidad el nombre de «General de División José Manuel Novoa» y,
+        a partir de 1945, pasó a ser motorizado (Regimiento de Artillería Motorizado n.º 2 "Arica"). El 21 de julio de 1981,
+        el regimiento pasa a denominarse Regimiento de Infantería n.º 21 «Arica».</string>
 </resources>

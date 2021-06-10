@@ -20,15 +20,17 @@ import com.muddzdev.styleabletoast.StyleableToast;
 
 import java.util.Locale;
 
-public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnMarkerDragListener, OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMarkerDragListener, OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
     private ActivityMaps2Binding binding;
 
-    //Variable de tipo marker para añadir despues manualmente los marcadores o usar los mmap
+    //Variable de tipo marcador para añadir despues manualmente los marcadores o usar los mmap
     private Marker markerPrueba;
-    //Variable de tipo marker para mover el punto seleccionado
+    //Variable de tipo marcador Drag para mover el punto seleccionado
     private Marker markerDrag;
+    //Variable de tipo ventana de información
+    private Marker InfoWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,7 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnMark
         binding = ActivityMaps2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        // Obtenga SupportMapFragment y reciba una notificación cuando el mapa esté listo para usarse.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -47,8 +49,7 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnMark
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        //Las localizaciones usando mMap
-
+        /**Las localizaciones usando mMap**/
         // Ubicación "el faro" la serena
         LatLng FMLS = new LatLng(-29.905562377935368, -71.27430388326685);
         mMap.addMarker(new MarkerOptions().position(FMLS).draggable(true).title("Faro Monumental de La Serena").snippet("Lugar turístico se caracteriza por ser el símbolo de reconocimiento público de la ciudad es un faro funcional").icon(BitmapDescriptorFactory.fromResource(R.drawable.iconturist)));
@@ -100,16 +101,28 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnMark
                 .draggable(true)
         );
 
+        //Ubicación de marcador manual para trabajar con informacion extendida
+        LatLng prueba3 = new LatLng(-29.9084685, -71.2519774);
+        InfoWindow = googleMap.addMarker(new MarkerOptions()
+                .position(prueba3)
+                .title("Regimiento Arica")
+                .snippet("Regimiento de Infanteria N 21 Arica de la Serena")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.iconturist))
+                .draggable(true)
+        );
 
-        //Este es para centrar la vista o camara al cargar el mapa en una ubicacion predeterminada + un zoom
+        /**Metodos Que use en esta clase**/
+        //1-Camara es para centrar la vista o camara al cargar el mapa en una ubicacion predeterminada + un zoom
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(FMLS, 12));
-
+        //2-Clik en el marcador
         googleMap.setOnMarkerClickListener(this);
+        //3-Arrastrar el marcador
         googleMap.setOnMarkerDragListener(this);
-
+        //4-Dialogo
+        googleMap.setOnInfoWindowClickListener(this);
     }
 
-
+    /**2- Clik en el marcador**/
     //Esto me servira para reproducir los ecos al tocar el icono puedo hacer un swcht o con un if manejar las ubicaciones
     @Override
     public boolean onMarkerClick(Marker marker) {
@@ -127,8 +140,7 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnMark
     }
 
 
-    //DRAG LISTENER
-
+    /**3- Drag listener**/
     //1-Cuando comienza arrastrar
     @Override
     public void onMarkerDragStart(Marker marker) {
@@ -137,7 +149,6 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnMark
                     Toast.LENGTH_LONG, R.style.ColoredStroke).show();
         }
     }
-
     //2-Esta arrastrando
     @Override
     public void onMarkerDrag(Marker marker) {
@@ -148,9 +159,7 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnMark
                     marker.getPosition().longitude);
             setTitle(newTitle);
         }
-
     }
-
     //3-Cuando termina de arrastrar
     @Override
     public void onMarkerDragEnd(Marker marker) {
@@ -159,6 +168,16 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnMark
                     Toast.LENGTH_LONG, R.style.ColoredStroke).show();
             setTitle(R.string.title_activity_maps2);
         }
+    }
+    /**4 Ventanas de dialogos**/
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        if(marker.equals(InfoWindow)){
+            RegimientoAricaFragment.newIntance(marker.getTitle(),
+                    getString(R.string.Regimientoinfo))
+                    .show(getSupportFragmentManager(),null);
+        }
+
     }
 }
 
