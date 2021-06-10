@@ -70,7 +70,7 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
             return;
         }
         mMap.setMyLocationEnabled(true);
-
+        mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
         LocationManager locationManager = (LocationManager) MapsActivity1.this.getSystemService(Context.LOCATION_SERVICE);

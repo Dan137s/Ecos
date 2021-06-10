@@ -48,7 +48,7 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnInfo
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        mMap.getUiSettings().setZoomControlsEnabled(true);
         /**Las localizaciones usando mMap**/
         // Ubicación "el faro" la serena
         LatLng FMLS = new LatLng(-29.905562377935368, -71.27430388326685);
