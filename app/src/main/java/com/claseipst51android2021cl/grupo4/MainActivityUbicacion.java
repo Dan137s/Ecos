@@ -30,25 +30,39 @@ public class MainActivityUbicacion extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Agrego los valores o casteo los botones por su id
-        btnSitios = (Button) findViewById(R.id.btn_Sitios); //i1
-        btnUbicacion = (Button) findViewById(R.id.btn_Ubicacion); //i2
+        btnUbicacion = (Button) findViewById(R.id.btn_Ubicacion); //i1
+        btnSitios = (Button) findViewById(R.id.btn_Sitios); //i2
+        btnTipos = (Button) findViewById(R.id.btn_Tipos); //i3
 
-        btnSitios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i1 = new Intent (getApplicationContext(),MapsActivity2.class);
-                startActivity(i1);
-            }
-        });
 
+
+        /**Eventos de botones **/
+
+        //Ubicación
         btnUbicacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i2 = new Intent (getApplicationContext(),MapsActivity1.class);
+                Intent i1 = new Intent (getApplicationContext(),MapsActivity1.class);
+                startActivity(i1);
+            }
+        });
+        //Sitios Turisticos
+        btnSitios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent (getApplicationContext(),MapsActivity2.class);
                 startActivity(i2);
             }
         });
     }
+
+    //Este evento de boton esta afuera del OnCreate para crear mas codigo que usare + adelante
+    public void MapaSitios(View v)
+    {
+        Intent i3 = new Intent (getApplicationContext(),MapsActivityTipos.class);
+        startActivity(i3);
+    }
+
 
 
 

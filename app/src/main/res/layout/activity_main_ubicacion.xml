@@ -23,8 +23,8 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="435dp"
-                android:layout_height="192dp"
+                android:layout_width="400dp"
+                android:layout_height="260dp"
                 app:srcCompat="@drawable/mapiconubica1" />
         </LinearLayout>
 
@@ -39,21 +39,22 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/btn_Tipos"
-            android:layout_width="450dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="25px"
-            android:text="Tipos de Mapas"
-            android:textSize="30sp" />
-
-        <Button
             android:id="@+id/btn_Sitios"
             android:layout_width="450dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="25px"
             android:text="Sitios Turisticos"
+            android:textSize="30sp" />
+
+        <Button
+            android:onClick="MapaSitios"
+            android:id="@+id/btn_Tipos"
+            android:layout_width="450dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25px"
+            android:text="Tipos de Mapas"
             android:textSize="30sp" />
 
     </LinearLayout>

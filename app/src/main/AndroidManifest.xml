@@ -38,8 +38,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MapsActivityTipos"
+            android:label="@string/title_activity_maps_tipos"></activity>
+        <activity
             android:name=".MapsActivity2"
-            android:label="@string/title_activity_maps2"></activity>
+            android:label="@string/title_activity_maps2" />
         <activity
             android:name=".MapsActivity1"
             android:label="@string/title_activity_maps1" />
