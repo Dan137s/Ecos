@@ -48,6 +48,7 @@ public class MapsActivity2 extends AppCompatActivity implements GoogleMap.OnInfo
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        //Añado el boton (+, -) del zoom en pantalla
         mMap.getUiSettings().setZoomControlsEnabled(true);
         /**Las localizaciones usando mMap**/
         // Ubicación "el faro" la serena

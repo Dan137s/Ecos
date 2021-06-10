@@ -11,6 +11,8 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -26,6 +28,7 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
     //Variable privada de googlemaps
     private GoogleMap mMap;
     private ActivityMaps1Binding binding;
+    private Button btn_hibrido, btn_normal, btn_satelital, btn_terreno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +42,33 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         getLocalizacion();
-    }
 
+        //Casteo de los botones
+        btn_hibrido = (Button) findViewById(R.id.btn_hibrido);
+        btn_satelital = (Button) findViewById(R.id.btn_satelital);
+        btn_normal = (Button) findViewById(R.id.btn_normal);
+        btn_terreno = (Button) findViewById(R.id.btn_terreno);
+    }
+    //Aqui cargara el mapa segun la version seleccionada con el evento del boton
+    public void CambiarHibrido(View view)
+    {
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+    }
+    public void CambiarSatelital(View view)
+    {
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+    }
+    public void CambiarTerreno(View view)
+    {
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+    }
+    public void CambiarNormal(View view)
+    {
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+    }
 
     //Metodo de Geolocalización
     private void getLocalizacion() {
-
         int permiso = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
         if(permiso == PackageManager.PERMISSION_DENIED){
             if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
@@ -69,7 +93,9 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
+        //Mi locacion
         mMap.setMyLocationEnabled(true);
+        //Añado el boton (+, -) del zoom en pantalla
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 

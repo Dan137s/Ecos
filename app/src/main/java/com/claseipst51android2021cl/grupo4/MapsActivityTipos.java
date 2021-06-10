@@ -40,16 +40,15 @@ public class MapsActivityTipos extends FragmentActivity implements OnMapReadyCal
 
     }
 
+    //Aqui cargara el mapa segun la version seleccionada con el evento del boton
     public void CambiarHibrido(View view)
     {
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
     }
-
     public void CambiarSatelital(View view)
     {
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
     }
-
     public void CambiarTerreno(View view)
     {
         mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
@@ -61,8 +60,11 @@ public class MapsActivityTipos extends FragmentActivity implements OnMapReadyCal
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         mMap = googleMap;
+        //Añado el boton (+, -) del zoom en pantalla
         mMap.getUiSettings().setZoomControlsEnabled(true);
+
         // Ubicación Pais Chile principal no Australia, sidney ya bueno disney
         LatLng CpCL = new LatLng(-33.43782949348624, -70.65044066638902);
         mMap.addMarker(new MarkerOptions().position(CpCL).title("Chile").snippet("Capital de chile, Santiago Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.chile)));
