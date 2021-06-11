@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -28,7 +29,7 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
     //Variable privada de googlemaps
     private GoogleMap mMap;
     private ActivityMaps1Binding binding;
-    private Button btn_hibrido, btn_normal, btn_satelital, btn_terreno;
+    private Button btnEcos, btnSitios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +46,30 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         getLocalizacion();
 
         //Casteo de los botones
-        btn_hibrido = (Button) findViewById(R.id.btn_hibrido);
-        btn_satelital = (Button) findViewById(R.id.btn_satelital);
-        btn_normal = (Button) findViewById(R.id.btn_normal);
-        btn_terreno = (Button) findViewById(R.id.btn_terreno);
+        btnEcos = (Button) findViewById(R.id.btn_ec);
+        btnSitios = (Button) findViewById(R.id.btn_sit);
+
+        /**Eventos de botones **/
+
+        //Ecos
+        btnEcos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i1 = new Intent (getApplicationContext(),MapsActivity3.class);
+                startActivity(i1);
+            }
+        });
+        //Sitios Turisticos
+        btnSitios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent (getApplicationContext(),MapsActivity2.class);
+                startActivity(i2);
+            }
+        });
     }
+
+    /**
     //Aqui cargara el mapa segun la version seleccionada con el evento del boton
     public void CambiarHibrido(View view)
     {
@@ -67,7 +87,7 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
     {
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
-
+**/
     //Metodo de Geolocalización
     private void getLocalizacion() {
         int permiso = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
@@ -144,13 +164,19 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(CpCL).title("Chile").snippet("Capital de chile, Santiago Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.chile)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(CpCL));
 
+        // Ubicación Pais Argentina
+        LatLng CpAR = new LatLng(-34.6075682, -58.4370894);
+        mMap.addMarker(new MarkerOptions().position(CpAR).title("Argentina").snippet("Capital de argentina, Buenos Aires es la gran capital cosmopolita").icon(BitmapDescriptorFactory.fromResource(R.drawable.argentina)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(CpAR));
+
+        // Ubicación Pais Brasil
+        LatLng CpBR = new LatLng(-15.7754462, -47.7970891);
+        mMap.addMarker(new MarkerOptions().position(CpBR).title("Brasil").snippet("Capital de Brasil, Brasilia fue construida con el fin de ser la nueva capital de Brasil").icon(BitmapDescriptorFactory.fromResource(R.drawable.brasil)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(CpBR));
+
         //Este es para centrar la vista o camara al cargar el mapa en una ubicacion predeterminada + un zoom
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CpCL,5));
 
-        // Ubicación test pacos ql
-        LatLng LosPaco = new LatLng(-29.915932308757732, -71.21836450174372);
-        mMap.addMarker(new MarkerOptions().position(LosPaco).title("Carabineros de la nación").snippet("si el mal acecha la paz del nido jajaj pacos c.t.m.!@#$%&/!").icon(BitmapDescriptorFactory.fromResource(R.drawable.icoeco2)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(LosPaco));
     }
 }
 

@@ -31,8 +31,6 @@ public class MainActivityUbicacion extends AppCompatActivity {
 
         //Agrego los valores o casteo los botones por su id
         btnUbicacion = (Button) findViewById(R.id.btn_Ubicacion); //i1
-        btnSitios = (Button) findViewById(R.id.btn_Sitios); //i2
-
 
 
 
@@ -46,14 +44,7 @@ public class MainActivityUbicacion extends AppCompatActivity {
                 startActivity(i1);
             }
         });
-        //Sitios Turisticos
-        btnSitios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i2 = new Intent (getApplicationContext(),MapsActivity2.class);
-                startActivity(i2);
-            }
-        });
+
     }
 
 

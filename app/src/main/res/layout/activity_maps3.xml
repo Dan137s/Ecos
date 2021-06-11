@@ -3,25 +3,43 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-
         <Button
-            android:id="@+id/btn_ec"
+            android:id="@+id/btn_hibrido"
+            android:onClick="CambiarHibrido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ecos Cercanos" />
+            android:text="HIBRIDO" />
 
         <Button
-            android:id="@+id/btn_sit"
+            android:id="@+id/btn_satelital"
+            android:onClick="CambiarSatelital"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Sitios turisticos" />
+            android:text="SATELITAL" />
+
+        <Button
+            android:id="@+id/btn_terreno"
+            android:onClick="CambiarTerreno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TERRENO" />
+
+        <Button
+            android:id="@+id/btn_normal"
+            android:onClick="CambiarNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NORMAL" />
     </LinearLayout>
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
@@ -30,6 +48,5 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapsActivity1" />
-
+    tools:context=".MapsActivity3" />
 </LinearLayout>

@@ -38,16 +38,6 @@
             android:text="Mi ubicación"
             android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/btn_Sitios"
-            android:layout_width="450dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="25px"
-            android:text="Zona Turistica"
-            android:textSize="30sp" />
-
-
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
