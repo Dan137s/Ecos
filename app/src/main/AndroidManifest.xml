@@ -56,7 +56,6 @@
         <activity android:name=".MainActivityUbicacion" />
         <activity android:name=".MainActivityListadoEco" />
         <activity android:name=".MenuActivityInvitado" />
-        <activity android:name=".MainActivitySesion" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

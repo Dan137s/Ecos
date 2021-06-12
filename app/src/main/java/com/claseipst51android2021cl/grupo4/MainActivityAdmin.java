@@ -24,7 +24,7 @@ import dmax.dialog.SpotsDialog;
 
 public class MainActivityAdmin extends AppCompatActivity {
     //Variables
-    ElasticCheckButton recuperar, btnIn;
+    ElasticCheckButton  btnIn;
     TextInputEditText gmail, password;
     private FirebaseAuth mAuth;
     AlertDialog alerta;
@@ -39,7 +39,6 @@ public class MainActivityAdmin extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
-        recuperar=(ElasticCheckButton) findViewById(R.id.btnRContraseña);
         btnIn=(ElasticCheckButton) findViewById(R.id.btnIn);
 
         gmail=findViewById(R.id.gmail);
@@ -47,7 +46,6 @@ public class MainActivityAdmin extends AppCompatActivity {
 
         alerta = new SpotsDialog.Builder().setContext(MainActivityAdmin.this).setMessage("Por favor espera...").build();
 
-        getRecuperar();
         loginAdmin();
         limpiar();
     }
@@ -91,20 +89,11 @@ public class MainActivityAdmin extends AppCompatActivity {
         });
     }
 
-    //Metodo para el boton recuperar contraseña
-    private void getRecuperar() {
-        recuperar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivityAdmin.this, MainActivityRestablecerClave.class);
-                Toast.makeText(getApplicationContext(), "Restablece tu clave",
-                        Toast.LENGTH_SHORT).show();
-                startActivity(i);
-            }
-        });
+
+    public void getRecuperar(View view) {
+        Intent i3 = new Intent(this, MainActivityRestablecerClave.class);
+        startActivity(i3);
     }
-
-
 
     public void invitado(View view) {
         Intent i3 = new Intent(this, MainActivityInicio.class);

@@ -100,4 +100,12 @@ public class MainActivityRestablecerClave extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    //Metodo registrar usuario al no contar con uno le proporciono desde la ventana recuperar contraseña
+    public void registrar(View view) {
+        Intent i2 = new Intent(this, MainActivityResgistroUser.class);
+
+        startActivity(i2);
+
+    }
 }

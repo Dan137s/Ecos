@@ -62,9 +62,9 @@
         android:layout_width="325dp"
         android:layout_height="118dp"
         android:fontFamily="@font/dosis"
-        android:text="Añadir  (+)"
+        android:text="Nuevo +"
         android:textAlignment="center"
-        android:textColor="#12FFFFFF"
+        android:textColor="#61FFFFFF"
         android:textSize="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,17 +78,17 @@
         android:layout_width="382dp"
         android:layout_height="139dp"
         android:fontFamily="@font/dosis"
+        android:gravity="center"
         android:text="Usuario"
         android:textAlignment="center"
-        android:textColor="#4BFFFFFF"
+        android:textColor="#32FFFFFF"
         android:textSize="120dp"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.877" />
 
     <Button
         android:id="@+id/btnRegistroUser"
@@ -103,5 +103,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.622" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:onClick="volverLogin"
+        android:textAlignment="center"
+        android:textColor="#F3FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.742" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

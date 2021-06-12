@@ -7,161 +7,146 @@
     android:orientation="vertical"
     tools:context=".MainActivityAdmin">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="20dp"
-        android:fadingEdge="horizontal|vertical"
-        app:cardCornerRadius="1dp"
-        app:cardElevation="1dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imagen"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/imgprofile2"
+            app:civ_border_color="@color/purple_500"
+            app:civ_border_width="2dp"></de.hdodenhof.circleimageview.CircleImageView>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imagen"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/usere"
-                app:civ_border_color="@color/colorBoton2"
-                app:civ_border_width="2dp"></de.hdodenhof.circleimageview.CircleImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="25dp"
+            android:text="Ingrese sus credenciales"
+            android:textAlignment="center"
+            android:textColor="#65000000"
+            android:textSize="31dp"
+            android:textStyle="bold" />
 
-            <TextView
+        <!--Correo-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Correo electronico"
+            android:textAlignment="textStart"
+            android:textColorHint="@color/purple_700"
+            android:textStyle="bold"
+            app:boxBackgroundColor="@color/colorBoton3"
+            app:counterTextColor="@color/purple_500"
+            app:hintTextColor="@color/purple_500">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gmail"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="25dp"
-                android:gravity="center"
-                android:text="Ingrese sus credenciales"
-                android:textColor="#000"
-                android:textSize="20dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/colorBoton2"
+                android:textColorHint="@color/colorBoton2"
+                android:textColorLink="@color/colorBoton2"
                 android:textStyle="bold" />
 
-            <!--Correo-->
-            <com.google.android.material.textfield.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Contraseña-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="textStart"
+            android:hint="Contraseña"
+            android:textColorHint="@color/purple_700"
+            android:textStyle="bold"
+            app:boxBackgroundColor="@color/colorBoton3"
+            app:counterTextColor="@color/purple_500"
+            app:hintTextColor="@color/purple_500">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:hint="Correo electronico"
-                android:textColorHint="@color/purple_700"
-                android:textStyle="bold"
-                app:boxBackgroundColor="@color/colorBoton3"
-                app:counterTextColor="@color/purple_500"
-                app:hintTextColor="@color/purple_500">
+                android:gravity="center_horizontal"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/colorBoton2"
+                android:textColorHint="@color/colorBoton2"
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/gmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:inputType="textEmailAddress"
-                    android:singleLine="true"
-                    android:textColor="@color/colorBoton2"
-                    android:textColorHint="@color/colorBoton2"
+                android:textColorLink="@color/colorBoton2"
+                android:textStyle="bold" />
 
-                    android:textColorLink="@color/colorBoton2"
-                    android:textStyle="bold" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!--Contraseña-->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:hint="Contraseña"
-                android:textColorHint="@color/purple_700"
-                android:textStyle="bold"
-                app:boxBackgroundColor="@color/colorBoton3"
-                app:counterTextColor="@color/purple_500"
-                app:hintTextColor="@color/purple_500">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:inputType="textPassword"
-                    android:singleLine="true"
-                    android:textColor="@color/colorBoton2"
-                    android:textColorHint="@color/colorBoton2"
-
-                    android:textColorLink="@color/colorBoton2"
-                    android:textStyle="bold" />
-
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-            <!--Boton ingresar-->
-            <com.skydoves.elasticviews.ElasticCheckButton
-                android:id="@+id/btnIn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@color/purple_500"
-                android:text="Iniciar sesión"
-                android:textColor="#ffff"
-                android:textStyle="bold"
-                app:checkButton_alpha="0.7"
-                app:checkButton_cornerRadius="4dp"
-                app:checkButton_duration="400"
-                app:checkButton_scale="0.9" />
+        <!--Boton ingresar-->
 
-            <!--Boton recuperar clave-->
-            <com.skydoves.elasticviews.ElasticCheckButton
-                android:id="@+id/btnRContraseña"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
-                android:background="@color/purple_500"
-                android:text="Restablecer contraseña"
-                android:textColor="#ffff"
-                android:textStyle="bold"
-                app:checkButton_alpha="0.7"
-                app:checkButton_cornerRadius="4dp"
-                app:checkButton_duration="400"
-                app:checkButton_scale="0.9" />
+        <!--Boton recuperar clave-->
+        <com.skydoves.elasticviews.ElasticCheckButton
+            android:id="@+id/btnIn"
+            android:layout_width="450dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/purple_500"
+            android:text="Iniciar Sesión"
+            android:textColor="#ffff"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:checkButton_alpha="0.7"
+            app:checkButton_cornerRadius="4dp"
+            app:checkButton_duration="400"
+            app:checkButton_scale="0.9" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:onClick="getRecuperar"
+            android:text="Restablecer Contraseña?"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#A9FF5722"
+            android:textSize="20dp"
+            />
 
 
-            <TextView
-                android:id="@+id/txtInvitado"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginBottom="96dp"
-                android:onClick="invitado"
-                android:text="Atras"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txtInvitado"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="96dp"
+            android:onClick="invitado"
+            android:text="Volver"
+            android:textAlignment="center"
+            android:textColor="#80000000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>
 
 

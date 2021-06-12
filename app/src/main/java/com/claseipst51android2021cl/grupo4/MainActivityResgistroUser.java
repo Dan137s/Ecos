@@ -102,6 +102,13 @@ public class MainActivityResgistroUser extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void volverLogin (View view) {
+        Intent i2 = new Intent(this, MainActivityAdmin.class);
+
+        startActivity(i2);
+
+    }
+
     private void registerUser(){
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
