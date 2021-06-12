@@ -17,25 +17,25 @@ public class TimeAgo {
 
         if(seconds < 60){
             //En este momento
-            return "just now";
+            return "Ahora";
         } else if (minutes == 1) {
             //hace un minuto
-            return "a minute ago";
+            return " un minuto atrás";
             //hace minutos
         } else if (minutes > 1 && minutes < 60) {
-            return minutes + " minutes ago";
+            return minutes + " minutos atrás";
         } else if (hours == 1) {
             //hace una hora
-            return "an hour ago";
+            return " hora atrás";
         } else if (hours > 1 && hours < 24) {
             //horas atras
-            return hours + " hours ago";
+            return hours + " horas atrás";
         } else if (days == 1) {
             //Hace un día
-            return "a day ago";
+            return " Día atrás";
         } else {
             //hace días
-            return days + " days ago";
+            return days + " días atrás";
         }
 
     }

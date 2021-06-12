@@ -157,11 +157,11 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         String recordPath = getActivity().getExternalFilesDir("/").getAbsolutePath();
 
         //Obtener la fecha y hora actual
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss", Locale.CANADA);
+        SimpleDateFormat formatter = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss", Locale.CANADA);
         Date now = new Date();
 
         //Inicializar la variable de nombre de archivo con la fecha y la hora al final para asegurarse de que el nuevo archivo no sobrescriba el archivo anterior
-        recordFile = "Recording_" + formatter.format(now) + ".3gp";
+        recordFile = "Grabación_" + formatter.format(now) + ".3gp";
 
         filenameText.setText("Grabación, nombre de archivo : " + recordFile);
 

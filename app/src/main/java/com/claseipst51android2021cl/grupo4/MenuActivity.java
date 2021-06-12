@@ -43,7 +43,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent im1 = new Intent(MenuActivity.this, MainActivityGrabadora1.class);
-                StyleableToast.makeText(getApplicationContext(), "Grabe lo que quiera",
+                StyleableToast.makeText(getApplicationContext(), "Presione el boton para grabar",
                         Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                 startActivity(im1);
             }
