@@ -18,10 +18,8 @@ public class MenuActivityInvitado extends AppCompatActivity {
     //Declaro las vbles, para usar los botones del menu_activity y llamar las sgtes act. dentro de un cardview
     CardView ubicacion, listadoeco, compartir, iniciarse;
 
-    //Crear una alerta para encender gps
-    AlertDialog alertaGPS = null;
 
-    //Crear una alerta para encender internet
+    //Crear una alerta para conectar el "wifi" internet
     AlertDialog alertaINT = null;
 
 
@@ -48,7 +46,6 @@ public class MenuActivityInvitado extends AppCompatActivity {
         getListaEco();
         getCompartir();
         getIniciarSe();
-        getAlertaNotGps();
         getAlertaNotInternet();
     }
 
@@ -63,7 +60,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
         builder.setMessage("Hola bienvenid@s a ecos. Revisar tu conexion a internet?")
                 .setCancelable(false)
                 .setIcon(R.drawable.iconturist)
-                .setTitle("GPS")
+                .setTitle("Wifi")
                 .setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
@@ -82,29 +79,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
     }
 
 
-    //Alerta de gps apagado
-    private void getAlertaNotGps() {
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Por favor encienda el GPS. Desea activarlo?")
-                .setCancelable(false)
-                .setIcon(R.drawable.marca3)
-                .setTitle("GPS")
-                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
-                        startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-                    }
-                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
-                dialog.cancel();
-
-            }
-        });
-        alertaGPS = builder.create();
-        alertaGPS.show();
-    }
 
     //Ubicación
     private void getUbicacion() {
@@ -158,5 +133,4 @@ public class MenuActivityInvitado extends AppCompatActivity {
         });
     }
 
-    //Metodo
     }

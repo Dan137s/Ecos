@@ -2,10 +2,13 @@ package com.claseipst51android2021cl.grupo4;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +18,9 @@ public class MainActivityUbicacion extends AppCompatActivity {
 
     //Declaro e importo lo que usare "Botones"
     Button btnSitios, btnUbicacion, btnTipos;
+
+    //Crear una alerta para encender gps
+    AlertDialog alertaGPS = null;
 
 
     @Override
@@ -32,7 +38,8 @@ public class MainActivityUbicacion extends AppCompatActivity {
         //Agrego los valores o casteo los botones por su id
         btnUbicacion = (Button) findViewById(R.id.btn_Ubicacion); //i1
 
-
+        //Llamo a los metodos
+        getAlertaNotGps();
 
         /**Eventos de botones **/
 
@@ -58,6 +65,31 @@ public class MainActivityUbicacion extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    //Alerta de gps apagado
+    private void getAlertaNotGps() {
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Por favor encienda el GPS. Desea activarlo?")
+                .setCancelable(false)
+                .setIcon(R.drawable.marca3)
+                .setTitle("GPS")
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                    }
+                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                dialog.cancel();
+
+            }
+        });
+        alertaGPS = builder.create();
+        alertaGPS.show();
+
     }
 }
 
