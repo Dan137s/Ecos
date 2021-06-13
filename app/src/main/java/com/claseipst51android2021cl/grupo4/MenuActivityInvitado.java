@@ -1,11 +1,14 @@
 package com.claseipst51android2021cl.grupo4;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Toast;
 
@@ -14,6 +17,14 @@ import com.muddzdev.styleabletoast.StyleableToast;
 public class MenuActivityInvitado extends AppCompatActivity {
     //Declaro las vbles, para usar los botones del menu_activity y llamar las sgtes act. dentro de un cardview
     CardView ubicacion, listadoeco, compartir, iniciarse;
+
+    //Crear una alerta para encender gps
+    AlertDialog alertaGPS = null;
+
+    //Crear una alerta para encender internet
+    AlertDialog alertaINT = null;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +48,65 @@ public class MenuActivityInvitado extends AppCompatActivity {
         getListaEco();
         getCompartir();
         getIniciarSe();
+        getAlertaNotGps();
+        getAlertaNotInternet();
     }
+
+
 
     //Metodos para los botones solo redireccion a pestañas"Activities":
     // Ubicación, Lista Ecos, Compartir la app, Iniciar sesión.
 
-        //Ubicación
+    private void getAlertaNotInternet() {
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Hola bienvenid@s a ecos. Revisar tu conexion a internet?")
+                .setCancelable(false)
+                .setIcon(R.drawable.iconturist)
+                .setTitle("GPS")
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                    }
+                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                dialog.cancel();
+
+            }
+        });
+        alertaINT = builder.create();
+        alertaINT.show();
+
+    }
+
+
+    //Alerta de gps apagado
+    private void getAlertaNotGps() {
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Por favor encienda el GPS. Desea activarlo?")
+                .setCancelable(false)
+                .setIcon(R.drawable.marca3)
+                .setTitle("GPS")
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                    }
+                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                dialog.cancel();
+
+            }
+        });
+        alertaGPS = builder.create();
+        alertaGPS.show();
+    }
+
+    //Ubicación
     private void getUbicacion() {
             ubicacion.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -93,4 +157,6 @@ public class MenuActivityInvitado extends AppCompatActivity {
             }
         });
     }
+
+    //Metodo
     }
