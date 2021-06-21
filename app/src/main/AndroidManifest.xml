@@ -13,7 +13,7 @@
     <!-- Internet -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- Internet -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Almacenamiento -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Location -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Grabación de audio -->
     <uses-permission android:name="android.hardware.location.gps" /> <!-- GPS -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 

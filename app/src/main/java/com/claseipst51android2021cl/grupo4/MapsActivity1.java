@@ -114,8 +114,10 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
+
         //Mi locacion
         mMap.setMyLocationEnabled(true);
+
         //Añado el boton (+, -) del zoom en pantalla
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
@@ -127,8 +129,10 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
             @Override
             public void onLocationChanged(Location location) {
                 LatLng miUbicacion = new LatLng(location.getLatitude(), location.getLongitude());
+
                 //Marcador de la ub. actual
                 mMap.addMarker(new MarkerOptions().position(miUbicacion).title("Ubicación actual").icon(BitmapDescriptorFactory.fromResource(R.drawable.marca3)));
+
                 //Foco de la camara según la ubicación
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(miUbicacion));
                 CameraPosition cameraPosition = new CameraPosition.Builder()
