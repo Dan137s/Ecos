@@ -60,6 +60,7 @@ public class MenuActivity extends AppCompatActivity {
                 StyleableToast.makeText(getApplicationContext(), "Re-direccion al home",
                         Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                 startActivity(im2);
+                finish();
             }
         });
     }
