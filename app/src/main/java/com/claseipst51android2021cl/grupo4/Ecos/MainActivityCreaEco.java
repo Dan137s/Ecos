@@ -1,30 +1,29 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Ecos;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
-public class MainActivityCompartirApp extends AppCompatActivity {
+import com.claseipst51android2021cl.grupo4.R;
+
+public class MainActivityCreaEco extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_compartir_app);
+        setContentView(R.layout.activity_main_crea_eco);
 
-        //Titulo de la aplicacion o action bar que lo centre
+        //Titulo de la aplicación o action bar que lo centre
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.txt_titulo);
 
-        //Flecha atras
+        //Flecha volver
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-    //Metodo para volver atras de la flechita back
+    //Metodo para la flecha y volver atras
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){

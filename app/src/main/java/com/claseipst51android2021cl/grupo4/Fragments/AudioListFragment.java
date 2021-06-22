@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Fragments;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
@@ -18,6 +18,8 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.claseipst51android2021cl.grupo4.AudioListAdapter;
+import com.claseipst51android2021cl.grupo4.R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 import java.io.File;

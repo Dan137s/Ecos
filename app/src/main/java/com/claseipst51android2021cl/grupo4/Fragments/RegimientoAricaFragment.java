@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Fragments;
 //Libreria de dialog fragment
 import android.app.Dialog;
 import android.os.Bundle;

@@ -38,26 +38,26 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity3"
+            android:name=".Mapas.MapsActivity3"
             android:label="@string/title_activity_maps3"></activity>
         <activity
-            android:name=".MapsActivity2"
+            android:name=".Mapas.MapsActivity2"
             android:label="@string/title_activity_maps2" />
         <activity
-            android:name=".MapsActivity1"
+            android:name=".Mapas.MapsActivity1"
             android:label="@string/title_activity_maps1" />
-        <activity android:name=".MainActivityGrabadora1" />
-        <activity android:name=".MainActivityResgistroUser" />
-        <activity android:name=".MainActivityInicio" />
-        <activity android:name=".MainActivityCreaEco" />
-        <activity android:name=".MainActivityRestablecerClave" />
-        <activity android:name=".MainActivityAdmin" />
-        <activity android:name=".MainActivityCompartirApp" />
-        <activity android:name=".MainActivityUbicacion" />
-        <activity android:name=".MainActivityListadoEco" />
-        <activity android:name=".MenuActivityInvitado" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Ecos.MainActivityGrabadora1" />
+        <activity android:name=".Ecos.MainActivityResgistroUser" />
+        <activity android:name=".Ecos.MainActivityInicio" />
+        <activity android:name=".Ecos.MainActivityCreaEco" />
+        <activity android:name=".Ecos.MainActivityRestablecerClave" />
+        <activity android:name=".Ecos.MainActivityAdmin" />
+        <activity android:name=".Ecos.MainActivityCompartirApp" />
+        <activity android:name=".Ecos.MainActivityUbicacion" />
+        <activity android:name=".Ecos.MainActivityListadoEco" />
+        <activity android:name=".Ecos.MenuActivityInvitado" />
+        <activity android:name=".Ecos.MenuActivity" />
+        <activity android:name=".Ecos.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

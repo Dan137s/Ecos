@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Ecos;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -11,13 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.claseipst51android2021cl.grupo4.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.muddzdev.styleabletoast.StyleableToast;
 import com.skydoves.elasticviews.ElasticCheckButton;
-import com.skydoves.elasticviews.ElasticFinishListener;
 
 public class MainActivityRestablecerClave extends AppCompatActivity {
     private TextInputEditText gmail;
