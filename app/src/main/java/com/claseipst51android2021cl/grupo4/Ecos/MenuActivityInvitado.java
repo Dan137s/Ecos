@@ -12,6 +12,7 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.Toast;
 
+import com.claseipst51android2021cl.grupo4.MainActivityLogin;
 import com.claseipst51android2021cl.grupo4.R;
 import com.muddzdev.styleabletoast.StyleableToast;
 
@@ -126,7 +127,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
         iniciarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im3 = new Intent(MenuActivityInvitado.this, MainActivityInicio.class);
+                Intent im3 = new Intent(MenuActivityInvitado.this, MainActivityLogin.class);
                 StyleableToast.makeText(getApplicationContext(), "Bienvenidos a Ecos",
                         Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                 startActivity(im3);

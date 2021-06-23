@@ -6,12 +6,14 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.claseipst51android2021cl.grupo4.R;
 import com.muddzdev.styleabletoast.StyleableToast;
 
 public class MenuActivity extends AppCompatActivity {
+    TextView nombre;
     //Declaro las vbles, para usar los botones del menu_activity y llamar las sgtes act. dentro de un cardview
     CardView creaeco, listadoeco, ubicacion, cerrar;
 
@@ -19,6 +21,8 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        nombre=(TextView) findViewById(R.id.nombreU);
 
         //Titulo de la aplicacion o action bar que lo centre
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);

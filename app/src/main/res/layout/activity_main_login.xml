@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Ecos.MainActivityAdmin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imagen"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/imgprofile2"
+            app:civ_border_color="@color/purple_500"
+            app:civ_border_width="2dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="25dp"
+            android:text="Ingrese sus credenciales"
+            android:textAlignment="center"
+            android:textColor="#65000000"
+            android:textSize="31dp"
+            android:textStyle="bold" />
+
+        <!--Correo-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Correo electronico"
+            android:textAlignment="textStart"
+            android:textColorHint="@color/purple_700"
+            android:textStyle="bold"
+            app:boxBackgroundColor="@color/colorBoton3"
+            app:counterTextColor="@color/purple_500"
+            app:hintTextColor="@color/purple_500">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/User"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/colorBoton2"
+                android:textColorHint="@color/colorBoton2"
+                android:textColorLink="@color/colorBoton2"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Contraseña-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="textStart"
+            android:hint="Contraseña"
+            android:textColorHint="@color/purple_700"
+            android:textStyle="bold"
+            app:boxBackgroundColor="@color/colorBoton3"
+            app:counterTextColor="@color/purple_500"
+            app:hintTextColor="@color/purple_500">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/colorBoton2"
+                android:textColorHint="@color/colorBoton2"
+
+                android:textColorLink="@color/colorBoton2"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Boton ingresar-->
+        <Button
+            android:id="@+id/btnEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+
+        <!--Boton recuperar clave-->
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
