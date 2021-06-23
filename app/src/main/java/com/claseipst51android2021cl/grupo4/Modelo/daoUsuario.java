@@ -1,9 +1,11 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Modelo;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.claseipst51android2021cl.grupo4.Clases.Usuario;
 
 import java.util.ArrayList;
 

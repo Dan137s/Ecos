@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.claseipst51android2021cl.grupo4.Clases.Usuario;
 import com.claseipst51android2021cl.grupo4.Ecos.MenuActivity;
+import com.claseipst51android2021cl.grupo4.Modelo.daoUsuario;
 
 public class MainActivityLogin extends AppCompatActivity implements View.OnClickListener {
     EditText user, pass;

@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.claseipst51android2021cl.grupo4.Clases.Usuario;
+import com.claseipst51android2021cl.grupo4.Modelo.daoUsuario;
+
 public class MainActivityRegistro extends AppCompatActivity implements View.OnClickListener{
     EditText us, pas, nom, ap;
     Button reg, can;

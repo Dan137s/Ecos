@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.claseipst51android2021cl.grupo4.Clases.TimeAgo;
+import com.claseipst51android2021cl.grupo4.R;
 
 import java.io.File;
 
