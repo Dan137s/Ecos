@@ -17,7 +17,6 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.claseipst51android2021cl.grupo4.Adapter.AudioListAdapter;
 import com.claseipst51android2021cl.grupo4.R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
