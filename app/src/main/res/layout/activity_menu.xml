@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".Ecos.MenuActivity">
+    tools:context=".MenuActivity">
 
     <RelativeLayout
         android:id="@+id/r1"
@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/nombreU"
+            android:id="@+id/txtView"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="#F44336"

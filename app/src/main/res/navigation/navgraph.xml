@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/recordFragment"
-        android:name="com.claseipst51android2021cl.grupo4.Fragments.RecordFragment"
+        android:name="com.claseipst51android2021cl.grupo4.RecordFragment"
         android:label="fragment_record"
         tools:layout="@layout/fragment_record" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/audioListFragment"
-        android:name="com.claseipst51android2021cl.grupo4.Fragments.AudioListFragment"
+        android:name="com.claseipst51android2021cl.grupo4.AudioListFragment"
         android:label="fragment_audio_list"
         tools:layout="@layout/fragment_audio_list" />
 </navigation>

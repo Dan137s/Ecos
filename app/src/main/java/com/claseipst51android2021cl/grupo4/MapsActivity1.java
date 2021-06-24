@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4.Mapas;
+package com.claseipst51android2021cl.grupo4;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -15,7 +15,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.claseipst51android2021cl.grupo4.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;

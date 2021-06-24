@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4.Clases;
+package com.claseipst51android2021cl.grupo4;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
