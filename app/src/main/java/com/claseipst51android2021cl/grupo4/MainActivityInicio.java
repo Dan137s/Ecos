@@ -24,7 +24,7 @@ public class MainActivityInicio extends AppCompatActivity {
 
 
     public void ingresar(View view) {
-        Intent i1 = new Intent(this, MainActivityAdmin.class);
+        Intent i1 = new Intent(this, MainActivityLogin.class);
 
         StyleableToast.makeText(getApplicationContext(), "Ingrese sus credenciales",
                 Toast.LENGTH_LONG, R.style.ColoredStroke).show();
