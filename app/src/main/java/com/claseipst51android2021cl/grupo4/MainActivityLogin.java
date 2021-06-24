@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivityLogin extends AppCompatActivity implements View.OnClickListener {
     EditText user, pass;
-    Button btnEntrar, btnRegistrar;
+    Button btnEntrar;
     daoUsuario dao;
 
     @Override
@@ -22,12 +22,15 @@ public class MainActivityLogin extends AppCompatActivity implements View.OnClick
         user=(EditText)findViewById(R.id.User);
         pass=(EditText)findViewById(R.id.Pass);
         btnEntrar=(Button)findViewById(R.id.btnEntrar);
-        btnRegistrar=(Button)findViewById(R.id.btnRegistrar);
+
         btnEntrar.setOnClickListener(this);
-        btnRegistrar.setOnClickListener(this);
         dao=new daoUsuario(this);
     }
+    public void registrarv(View view) {
+        Intent i2 = new Intent(this, MainActivityRegistro.class);
+        startActivity(i2);
 
+    }
     @Override
     public void onClick(View view) {
         switch(view.getId()){
@@ -49,12 +52,9 @@ public class MainActivityLogin extends AppCompatActivity implements View.OnClick
                 }
                 break;
 
-            case R.id.btnRegistrar:
-                Intent i = new Intent(MainActivityLogin.this, MainActivityRegistro.class);
-                startActivity(i);
-                break;
-
         }
 
     }
+
+
 }

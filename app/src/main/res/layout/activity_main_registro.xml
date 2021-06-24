@@ -7,7 +7,7 @@
     android:background="@drawable/wallp1"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".Ecos.MainActivityResgistroUser">
+    tools:context="MainActivityResgistroUser">
 
 
     <Button
@@ -16,6 +16,8 @@
         android:layout_height="80dp"
         android:background="@color/authui_colorAccent"
         android:text="Registrarse"
+        android:textSize="30sp"
+        android:textStyle="bold"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,18 +103,21 @@
         app:layout_constraintVertical_bias="0.011" />
 
 
-    <Button
-        android:id="@+id/btnRegCancelar"
-        android:layout_width="350dp"
-        android:layout_height="80dp"
-        android:background="@color/authui_colorAccent"
+    <TextView
+        android:id="@+id/Registrarme"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:onClick="cancelar"
         android:text="Cancelar"
-        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:textColor="#A1FDFDFD"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.994" />
+        app:layout_constraintVertical_bias="0.936" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

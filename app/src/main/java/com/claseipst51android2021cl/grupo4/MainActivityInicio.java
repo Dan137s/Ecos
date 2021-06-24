@@ -23,7 +23,7 @@ public class MainActivityInicio extends AppCompatActivity {
     }
 
 
-    public void ingresar(View view) {
+    public void login(View view) {
         Intent i1 = new Intent(this, MainActivityLogin.class);
 
         StyleableToast.makeText(getApplicationContext(), "Ingrese sus credenciales",
@@ -34,7 +34,7 @@ public class MainActivityInicio extends AppCompatActivity {
     }
 
     public void registrar(View view) {
-        Intent i2 = new Intent(this, MainActivityResgistroUser.class);
+        Intent i2 = new Intent(this, MainActivityRegistro.class);
 
         startActivity(i2);
 

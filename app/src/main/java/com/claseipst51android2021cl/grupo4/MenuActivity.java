@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.muddzdev.styleabletoast.StyleableToast;
@@ -13,11 +14,17 @@ import com.muddzdev.styleabletoast.StyleableToast;
 public class MenuActivity extends AppCompatActivity {
     //Declaro las vbles, para usar los botones del menu_activity y llamar las sgtes act. dentro de un cardview
     CardView creaeco, listadoeco, ubicacion, cerrar;
+    TextView nombre;
+    int id=0;
+    Usuario u;
+    daoUsuario dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        nombre=(TextView)findViewById(R.id.nombrU);
 
         //Titulo de la aplicacion o action bar que lo centre
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
@@ -34,6 +41,13 @@ public class MenuActivity extends AppCompatActivity {
         getCerrarSesion();
         getListaEco();
         getUbicacion();
+
+        Bundle b=getIntent().getExtras();
+        id=b.getInt("id");
+        dao=new daoUsuario(this);
+        u=dao.getUsuarioById(id);
+        nombre.setText("Usuario: "+u.getNombre()+" "+u.getApellidos());
+
 
     }
 

@@ -19,8 +19,8 @@ public class MenuActivityInvitado extends AppCompatActivity {
     CardView ubicacion, listadoeco, compartir, iniciarse;
 
 
-    //Crear una alerta para conectar el "wifi" internet
-    AlertDialog alertaINT = null;
+    /** //Crear una alerta para conectar el "wifi" internet
+    AlertDialog alertaINT = null;**/
 
 
 
@@ -46,7 +46,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
         getListaEco();
         getCompartir();
         getIniciarSe();
-        getAlertaNotInternet();
+       // getAlertaNotInternet();
     }
 
 
@@ -54,7 +54,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
     //Metodos para los botones solo redireccion a pestañas"Activities":
     // Ubicación, Lista Ecos, Compartir la app, Iniciar sesión.
 
-    private void getAlertaNotInternet() {
+  /**  private void getAlertaNotInternet() {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Hola bienvenid@s a ecos. Revisar tu conexion a internet?")
@@ -76,9 +76,7 @@ public class MenuActivityInvitado extends AppCompatActivity {
         alertaINT = builder.create();
         alertaINT.show();
 
-    }
-
-
+    }**/
 
 
     //Ubicación

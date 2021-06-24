@@ -28,9 +28,12 @@
         android:id="@+id/btnIngresar"
         android:layout_width="350dp"
         android:layout_height="80dp"
-        android:onClick="ingresar"
+        android:onClick="login"
         android:text="Iniciar Sesión"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarse"
+        android:textColor="#ffff"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,17 +54,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarse"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
         app:layout_constraintVertical_bias="0.112">
 
     </TextView>
 
     <Button
-        android:id="@+id/btnRegistrarse"
+        android:id="@+id/btnRegistrar"
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:onClick="registrar"
         android:text="Registrarse"
+        android:textColor="#ffff"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"

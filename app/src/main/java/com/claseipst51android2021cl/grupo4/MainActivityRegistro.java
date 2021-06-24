@@ -9,9 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.muddzdev.styleabletoast.StyleableToast;
+
 public class MainActivityRegistro extends AppCompatActivity implements View.OnClickListener{
     EditText us, pas, nom, ap;
-    Button reg, can;
+    Button reg;
     daoUsuario dao;
 
     @Override
@@ -23,10 +25,15 @@ public class MainActivityRegistro extends AppCompatActivity implements View.OnCl
         nom=(EditText)findViewById(R.id.RegNombre);
         ap=(EditText)findViewById(R.id.RegApellido);
         reg=(Button)findViewById(R.id.btnRegistrar);
-        can=(Button)findViewById(R.id.btnRegCancelar);
         reg.setOnClickListener(this);
-        can.setOnClickListener(this);
         dao=new daoUsuario(this);
+    }
+
+    public void cancelar(View view) {
+        Intent im3 = new Intent(MainActivityRegistro.this, MainActivityInicio.class);
+        StyleableToast.makeText(getApplicationContext(), "Bienvenidos a Ecos",
+                Toast.LENGTH_LONG, R.style.ColoredStroke).show();
+        startActivity(im3);
     }
 
     @Override
@@ -50,11 +57,6 @@ public class MainActivityRegistro extends AppCompatActivity implements View.OnCl
                 }
                 break;
 
-            case R.id.btnRegCancelar:
-                Intent i = new Intent(MainActivityRegistro.this, MainActivityLogin.class);
-                startActivity(i);
-                finish();
-                break;
         }
 
     }
