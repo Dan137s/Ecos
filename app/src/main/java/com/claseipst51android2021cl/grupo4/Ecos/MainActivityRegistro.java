@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Ecos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.claseipst51android2021cl.grupo4.R;
+import com.claseipst51android2021cl.grupo4.Clases.Usuario;
+import com.claseipst51android2021cl.grupo4.Modelo.daoUsuario;
 import com.muddzdev.styleabletoast.StyleableToast;
 
 public class MainActivityRegistro extends AppCompatActivity implements View.OnClickListener{
@@ -46,18 +49,19 @@ public class MainActivityRegistro extends AppCompatActivity implements View.OnCl
                 u.setNombre(nom.getText().toString());
                 u.setApellidos(ap.getText().toString());
                 if(!u.isNull()) {
-                    Toast.makeText(this, "Error: Campos vacios", Toast.LENGTH_LONG).show();
+                    StyleableToast.makeText(getApplicationContext(), "Error: Campos vacios...",
+                            Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                 }else if (dao.insertUsuario(u)) {
-                    Toast.makeText(this, "Registro Exitoso!", Toast.LENGTH_LONG).show();
+                    StyleableToast.makeText(getApplicationContext(), "Registro Exitoso!",
+                            Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                     Intent i2 = new Intent(MainActivityRegistro.this, MainActivityLogin.class);
                     startActivity(i2);
                     finish();
                 }else{
-                    Toast.makeText(this,"Usuario ya registrado!",Toast.LENGTH_LONG).show();
+                    StyleableToast.makeText(getApplicationContext(), "Este usuario ya esta registrado!",
+                            Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                 }
                 break;
-
         }
-
     }
 }

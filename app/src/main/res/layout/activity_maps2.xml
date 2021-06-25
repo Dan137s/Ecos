@@ -50,5 +50,5 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
 
-    tools:context=".MapsActivity2" />
+    tools:context=".Maps.MapsActivity2" />
 </LinearLayout>

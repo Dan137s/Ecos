@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Ecos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.claseipst51android2021cl.grupo4.R;
+import com.claseipst51android2021cl.grupo4.Clases.Usuario;
+import com.claseipst51android2021cl.grupo4.Modelo.daoUsuario;
+import com.muddzdev.styleabletoast.StyleableToast;
 
 public class MainActivityLogin extends AppCompatActivity implements View.OnClickListener {
     EditText user, pass;
@@ -38,23 +43,25 @@ public class MainActivityLogin extends AppCompatActivity implements View.OnClick
                 String u=user.getText().toString();
                 String p=pass.getText().toString();
                 if(u.equals("")&&p.equals("")){
-                    Toast.makeText(this, "Error: Campos vacios", Toast.LENGTH_LONG).show();
+                    StyleableToast.makeText(getApplicationContext(), "Ingrese sus {{credenciales}} correctamente",
+                            Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                 }else if(dao.login(u,p)==1) {
                     Usuario ux = dao.getUsuario(u, p);
-                    Toast.makeText(this, "Datos correctos", Toast.LENGTH_LONG).show();
+
+                    StyleableToast.makeText(getApplicationContext(), "Hola... Listo para crear tus ecos?",
+                            Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                     Intent i2 = new Intent(MainActivityLogin.this, MenuActivity.class);
                     i2.putExtra("id", ux.getId());
                     startActivity(i2);
                     finish();
                 }else{
-                    Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_LONG).show();
-
+                    StyleableToast.makeText(getApplicationContext(), "Credenciales incorrectas",
+                            Toast.LENGTH_LONG, R.style.ColoredStroke).show();
                 }
                 break;
 
         }
 
     }
-
 
 }

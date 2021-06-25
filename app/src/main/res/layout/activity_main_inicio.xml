@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallp5"
-    tools:context=".MainActivityInicio">
+    tools:context=".Ecos.MainActivityInicio">
 
     <TextView
         android:id="@+id/textView"

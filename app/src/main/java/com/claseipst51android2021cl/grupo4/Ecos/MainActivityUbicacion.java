@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Ecos;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -12,7 +12,9 @@ import android.provider.Settings;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import com.claseipst51android2021cl.grupo4.Maps.MapsActivity1;
+import com.claseipst51android2021cl.grupo4.R;
 
 public class MainActivityUbicacion extends AppCompatActivity {
 
@@ -47,7 +49,7 @@ public class MainActivityUbicacion extends AppCompatActivity {
         btnUbicacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i1 = new Intent (getApplicationContext(),MapsActivity1.class);
+                Intent i1 = new Intent (getApplicationContext(), MapsActivity1.class);
                 startActivity(i1);
             }
         });

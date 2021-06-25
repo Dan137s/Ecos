@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Ecos;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.view.WindowManager;
+
+import com.claseipst51android2021cl.grupo4.R;
 
 //En esta activity es la principal donde empieza con un splash screen
 public class MainActivity extends AppCompatActivity {

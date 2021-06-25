@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Fragments;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -24,6 +24,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.claseipst51android2021cl.grupo4.R;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

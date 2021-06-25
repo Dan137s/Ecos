@@ -1,4 +1,4 @@
-package com.claseipst51android2021cl.grupo4;
+package com.claseipst51android2021cl.grupo4.Ecos;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.claseipst51android2021cl.grupo4.R;
+import com.claseipst51android2021cl.grupo4.Clases.Usuario;
+import com.claseipst51android2021cl.grupo4.Modelo.daoUsuario;
 import com.muddzdev.styleabletoast.StyleableToast;
 
 public class MenuActivity extends AppCompatActivity {
