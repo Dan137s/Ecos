@@ -21,7 +21,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecos">
-        <activity android:name=".Ecos.MainActivityRegistro"></activity>
+        <activity android:name=".Ecos.MainActivityConverteEco"></activity>
+        <activity android:name=".Ecos.MainActivityRegistro" />
         <activity android:name=".Ecos.MainActivityLogin" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

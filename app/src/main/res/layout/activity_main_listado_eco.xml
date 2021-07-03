@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:text="Listado Ecos"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textColor="#B0000000"
         android:textSize="50dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,5 +21,17 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.197" />
+        app:layout_constraintVertical_bias="0.115" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="307dp"
+        android:layout_height="410dp"
+        android:onClick="toastmsj2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663"
+        app:srcCompat="@drawable/car" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -54,6 +54,13 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
+    public void converter(View view) {
+        Intent im3 = new Intent(MenuActivity.this, MainActivityConverteEco.class);
+        StyleableToast.makeText(getApplicationContext(), "Proximamente aun no disponible",
+                Toast.LENGTH_LONG, R.style.ColoredStroke).show();
+        startActivity(im3);
+    }
+
     //Inicio metodo crea eco
     private void getCreaEco() {
         creaeco.setOnClickListener(new View.OnClickListener() {
